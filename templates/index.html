@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MENTAL HEALTH PREDICTION</title>
+</head>
+<body>
+	<h1 style = "text-align: center">Predict the Mental Condition of an Individual</h1>
+	<h2>Please answer the following questions and click on "Submit"</h2>
+	<form action="{{url_for('predict')}}" method="post">
+		<label>1. First name: </label><input id="aa" type="text" name="aa" placeholder="Enter your first name" required><label> Last name: </label><input id="aa2" type="text" name="aa2" placeholder="Enter your last name" required><br><br>
+		<label>2. Age: </label><input id="ab" type="int" name="ab" placeholder="Enter your age" required><br><br>
+		<label>3. Gender: </label><label>Male </label><input id="ac" type="radio" name="ac" required>
+		<label>Female </label><input id="ac" type="radio" name="ac" required>
+		<label>Other </label><input id="ac" type="radio" name="ac" required><br><br>
+		<label>4. Race: </label><input id="ad" type="text" name="ad" placeholder="White/Asian/etc"><br><br>
+		<label>5. Location: </label><input id="ae" type="text" name="ae" placeholder="United States/UK/India/etc" required><br><br>
+		<label>6. Are you self-employed? </label><select name="af" id="af" required="required">
+                <option>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+        <label>7. How many employees does your company or organization have? </label><select name="ag" id="ag" required>
+                <option>Select</option>
+                <option value="1-5">1-5</option>
+                <option value="6-25">6-25</option>
+                <option value="26-100">26-100</option>
+                <option value="100-500">100-500</option>
+                <option value="500-1000">500-1000</option>
+                <option value="More than 1000">More than 1000</option>
+            </select><br><br>
+        <label>8. Is your employer primarily a tech company/organization? </label><select name="ah" id="ah" required>
+                <option>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br> 
+        <label>9. Is your primary role within your company related to tech/IT? </label><select name="ai" id="ai" required>
+                <option>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+        <label>10. Does your employer provide mental health benefits as part of healthcare coverage? </label><select name="aj" id="aj" required>
+                <option>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="Don't know">Don't know</option>
+                <option value="Not applicable to me / NA">Not applicable to me / NA</option>
+            </select><br><br>
+        <label>11. Do you know the options for mental health care available under your employer-provided health coverage? </label><select name="ak" id="ak" required>
+                <option>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="Not sure">Not sure</option>
+            </select><br><br>
+        <label>12. Has your employer ever formally discussed mental health (for example, as part of a wellness campaign or other official communication)? </label><select name="al" id="al" required>
+                <option>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="Don't know">Don't know</option>
+            </select><br><br>
+        <label>13. Does your employer offer resources to learn more about mental health disorders and options for seeking help? </label><select name="am" id="am" required>
+                <option>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="Don't know">Don't know</option>
+            </select><br><br>
+        <label>14. Is your anonymity protected if you choose to take advantage of mental health or substance abuse treatment resources provided by your employer? </label><select name="an" id="an" required>
+                <option>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="Don't know">Don't know</option>
+            </select><br><br>
+    	<label>15. If a mental health issue prompted you to request a medical leave from work, how easy or difficult would it be to ask for that leave? </label><select name="ao" id="ao" required>
+                <option>Select</option>
+                <option value="Very easy">Very easy</option>
+                <option value="Somewhat easy">Somewhat easy</option>
+                <option value="Neither easy nor difficult">Neither easy nor difficult</option>
+                <option value="Somewhat difficult">Somewhat difficult</option>
+                <option value="Difficult">Difficult</option>
+                <option value="Very difficult">Very difficult</option>
+                <option value="Don't know">Don't know</option>
+            </select><br><br>
+    	<label>16. Would you feel more comfortable talking to your coworkers about your physical health or your mental health? </label><select name="ap" id="ap" required>
+                <option>Select</option>
+                <option value="Physical health">Physical health</option>
+                <option value="Mental health">Mental health</option>
+                <option value="Same level of comfort for each">Same level of comfort for each</option>
+            </select><br><br>
+        <label>17. Would you feel comfortable discussing a mental health issue with your direct supervisor(s)? </label><select name="aq" id="aq" required>
+                <option>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value='Maybe'>Maybe</option>
+            </select><br><br>
+        <label>18. Have you ever discussed your mental health with your employer? </label><select name="ar" id="ar" required>
+                <option>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+        <label>19. Would you feel comfortable discussing a mental health issue with your coworkers? </label><select name="as" id="as" required>
+                <option>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value='Maybe'>Maybe</option>
+            </select><br><br>
+        <label>20. Have you ever discussed your mental health with coworkers? </label><select name="at" id="at" required>
+                <option>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+        <label>21. Have you ever had a coworker discuss their or another coworker's mental health with you? </label><select name="au" id="au" required>
+                <option>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+        <label>22. Overall, how much importance does your employer place on physical health? </label><select name="av" id="av" required>
+                <option>Select</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select><br><br>
+        <label>23. Overall, how much importance does your employer place on mental health? </label><select name="aw" id="aw" required>
+                <option>Select</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select><br><br>
+        <label>24. Do you have previous employers? </label><select name="ax" id="ax" required>
+                <option>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+        <label>25. Do you currently have a mental health disorder? </label><select name="ay" id="ay" required>
+                <option>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="Maybe">Maybe</option>
+                <option value="Don't know">Don't know</option>
+            </select><br><br>
+        <label>26. Have you had a mental health disorder in the past? </label><select name="az" id="az" required>
+                <option>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="Maybe">Maybe</option>
+                <option value="Don't know">Don't know</option>
+            </select><br><br>
+        <label>27. Have you ever sought treatment for a mental health disorder from a mental health professional? </label><select name="ba" id="ba" required>
+                <option>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+        <label>28. Do you have a family history of mental illness? </label><select name="bb" id="bb" required>
+                <option>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="Don't know">Don't know</option>
+            </select><br><br>
+        <label>29. If you have a mental health disorder, how often do you feel that it interferes with your work when being treated effectively? </label><select name="bc" id="bc" required>
+                <option>Select</option>
+                <option value="Often">Often</option>
+                <option value="Sometimes">Sometimes</option>
+                <option value="Rarely">Rarely</option>
+                <option value="Never">Never</option>
+                <option value="Not applicable to me">Not applicable to me</option>
+            </select><br><br>
+        <label>30. If you have a mental health disorder, how often do you feel that it interferes with your work when not being treated effectively (i.e., when you are experiencing symptoms)? </label><select name="bd" id="bd" required>
+                <option>Select</option>
+                <option value="Often">Often</option>
+                <option value="Sometimes">Sometimes</option>
+                <option value="Rarely">Rarely</option>
+                <option value="Never">Never</option>
+                <option value="Not applicable to me">Not applicable to me</option>
+            </select><br><br>
+        <label>31. Have your observations of how another individual who discussed a mental health issue made you less likely to reveal a mental health issue yourself in your current workplace? </label><select name="be" id="be" required>
+                <option>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="Maybe">Maybe</option>
+            </select><br><br>
+        <label>32. Would you be willing to bring up a physical health issue with a potential employer in an interview? </label><select name="bf" id="bf" required>
+                <option>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="Maybe">Maybe</option>
+            </select><br><br>
+        <label>33. Would you bring up your mental health with a potential employer in an interview? </label><select name="bg" id="bg" required>
+                <option>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="Maybe">Maybe</option>
+            </select><br><br>
+        <label>34. Are you openly identified at work as a person with a mental health issue? </label><select name="bh" id="bh" required>
+                <option>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+        <div style = "text-align: center"><button id="submit" type="submit">Submit</button></div>        
+        </form>
+        <div style = "text-align: center"><h3>{{ prediction_text }}<h3></div>
+	<style>
+        body {
+            background: url(https://www.sciencemag.org/sites/default/files/styles/article_main_large/public/worldmentalhealthday_16x9.jpg?itok=S0oRECQN);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            padding: 15px;
+            font-size: 20px;
+            color: white;
+        }
+        #submit {
+            font-size: 25px;
+            color: black;
+            padding: 15px;
+        }
+    </style>
+</body>
+</html>
